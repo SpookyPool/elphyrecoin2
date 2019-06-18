@@ -19,9 +19,7 @@ If you are using Clang, you will need Clang 6.0 or higher. You will also need li
 
 `sudo apt-get update`
 
-`sudo apt-get install aptitude -y`
-
-`sudo aptitude install -y build-essential g++-8 gcc-8 git libboost-all-dev python-pip`
+`sudo apt install -y build-essential g++-8 gcc-8 git libboost-all-dev python-pip`
 
 `sudo pip install cmake`
 
@@ -37,6 +35,8 @@ If you are using Clang, you will need Clang 6.0 or higher. You will also need li
 
 `make`
 
+To speed up the compilation: use `make -j 4` if you have at leat a 4 threads CPU and enough RAM (4 GB)
+
 The binaries will be in the src folder when you are complete.
 
 cd src
@@ -49,12 +49,6 @@ cd src
 `wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -`
 
 You need to modify the below command for your version of ubuntu - see https://apt.llvm.org/
-
-Ubuntu 14.04 (Trusty)
-`sudo add-apt-repository "deb https://apt.llvm.org/trusty/ llvm-toolchain-trusty 6.0 main"`
-
-Ubuntu 16.04 (Xenial)
-`sudo add-apt-repository "deb https://apt.llvm.org/xenial/ llvm-toolchain-xenial 6.0 main"`
 
 Ubuntu 18.04 (Bionic)
 `sudo add-apt-repository "deb https://apt.llvm.org/bionic/ llvm-toolchain-bionic 6.0 main"`
@@ -83,6 +77,8 @@ Ubuntu 18.04 (Bionic)
 
 `make`
 
+To speed up the compilation: use `make -j 4` if you have at leat a 4 threads CPU and enough RAM (4 GB)
+
 The binaries will be in the src folder when you are complete.
 
 `cd src`
@@ -106,6 +102,8 @@ If you want to use clang, ensure you set the environment variables CC and CXX. S
 `cmake ..`
 
 `make`
+
+To speed up the compilation: use `make -j 4` if you have at leat a 4 threads CPU and enough RAM (4 GB)
 
 The binaries will be in the src folder when you are complete.
 
